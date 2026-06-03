@@ -21,7 +21,7 @@ const app = express();
 // Prefer the dedicated API port for local dev so the React app can stay on 3000.
 // Cloud runtimes can still inject PORT and will be used when API_PORT is absent.
 const port = Number(process.env.API_PORT || process.env.PORT || 4002);
-const approvalEmail = process.env.APPROVAL_EMAIL_TO || 'kumar.devadharshini@gmail.com';
+const approvalEmail = process.env.APPROVAL_EMAIL_TO || 'akocentricsg@gmail.com';
 const weekdayOrder = { Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6, Sun: 7 };
 
 const corsOptions = {
