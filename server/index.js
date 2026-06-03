@@ -25,7 +25,11 @@ const approvalEmail = process.env.APPROVAL_EMAIL_TO || 'kumar.devadharshini@gmai
 const weekdayOrder = { Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6, Sun: 7 };
 
 const corsOptions = {
-  origin: ['https://akocentric-497106.web.app', 'https://akocentric-497104.web.app'],
+  origin: [
+    'https://akocentric-497106.web.app',
+    'https://akocentric-497104.web.app',
+    'https://akocentric-498016.web.app',
+  ],
   credentials: true,
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Origin', 'Accept'],
