@@ -1,0 +1,44 @@
+[debug] [2026-04-18T03:05:06.217Z] ----------------------------------------------------------------------
+[debug] [2026-04-18T03:05:06.220Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Deva\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-04-18T03:05:06.220Z] CLI Version:   15.15.0
+[debug] [2026-04-18T03:05:06.220Z] Platform:      win32
+[debug] [2026-04-18T03:05:06.220Z] Node Version:  v24.11.1
+[debug] [2026-04-18T03:05:06.220Z] Time:          Sat Apr 18 2026 11:05:06 GMT+0800 (Singapore Standard Time)
+[debug] [2026-04-18T03:05:06.221Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Deva\Documents\ClassroomBooking\classbook\server
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-04-18T03:05:21.292Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-18T03:05:21.293Z] > authorizing via signed-in user (justdeva2010@gmail.com)
+[debug] [2026-04-18T03:05:21.295Z] Checked if tokens are valid: true, expires at: 1776485092438
+[debug] [2026-04-18T03:05:21.295Z] Checked if tokens are valid: true, expires at: 1776485092438
+[debug] [2026-04-18T03:05:21.296Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2026-04-18T03:05:22.378Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2026-04-18T03:05:22.378Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2026-04-18T03:05:43.117Z] Checked if tokens are valid: true, expires at: 1776485092438
+[debug] [2026-04-18T03:05:43.118Z] Checked if tokens are valid: true, expires at: 1776485092438
+[debug] [2026-04-18T03:05:43.118Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/project-81939d70-2a8e-422a-8df:addFirebase [none]
+[debug] [2026-04-18T03:05:43.658Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/project-81939d70-2a8e-422a-8df:addFirebase 403
+[debug] [2026-04-18T03:05:43.658Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/project-81939d70-2a8e-422a-8df:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-04-18T03:05:43.659Z] Request to https://firebase.googleapis.com/v1beta1/projects/project-81939d70-2a8e-422a-8df:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2026-04-18T03:05:43.738Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/project-81939d70-2a8e-422a-8df:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\Deva\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\Deva\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.

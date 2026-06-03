@@ -1,0 +1,116 @@
+
+> classbook@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+[eslint] 
+src\App.js
+  Line 19:3:     'seedTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 42:46:    'deleteEduPartner' is defined but never used                                                                                                                                              no-unused-vars
+  Line 55:3:     'baseTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 2242:6:   React Hook useEffect has missing dependencies: 'buildTrainerSessionBooking', 'getTrainerSessionFromSelection', and 'selectedBooking'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 2365:42:  React Hook useMemo has a missing dependency: 'studentEnrollmentCourseOptions'. Either include it or remove the dependency array                                                           react-hooks/exhaustive-deps
+
+src\appData.js
+  Line 3:3:  'createEnrollmentRecord' is defined but never used  no-unused-vars
+
+src\utils.js
+  Line 74:43:  Function declared in a loop contains unsafe references to variable(s) 'weekOffset', 'weekOffset'  no-loop-func
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\App.js
+  Line 19:3:     'seedTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 42:46:    'deleteEduPartner' is defined but never used                                                                                                                                              no-unused-vars
+  Line 55:3:     'baseTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 2242:6:   React Hook useEffect has missing dependencies: 'buildTrainerSessionBooking', 'getTrainerSessionFromSelection', and 'selectedBooking'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 2365:42:  React Hook useMemo has a missing dependency: 'studentEnrollmentCourseOptions'. Either include it or remove the dependency array                                                           react-hooks/exhaustive-deps
+
+src\appData.js
+  Line 3:3:  'createEnrollmentRecord' is defined but never used  no-unused-vars
+
+src\utils.js
+  Line 74:43:  Function declared in a loop contains unsafe references to variable(s) 'weekOffset', 'weekOffset'  no-loop-func
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\App.js
+  Line 19:3:     'seedTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 42:46:    'deleteEduPartner' is defined but never used                                                                                                                                              no-unused-vars
+  Line 55:3:     'baseTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 2242:6:   React Hook useEffect has missing dependencies: 'buildTrainerSessionBooking', 'getTrainerSessionFromSelection', and 'selectedBooking'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 2365:42:  React Hook useMemo has a missing dependency: 'studentEnrollmentCourseOptions'. Either include it or remove the dependency array                                                           react-hooks/exhaustive-deps
+
+src\appData.js
+  Line 3:3:  'createEnrollmentRecord' is defined but never used  no-unused-vars
+
+src\utils.js
+  Line 74:43:  Function declared in a loop contains unsafe references to variable(s) 'weekOffset', 'weekOffset'  no-loop-func
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\App.js
+  Line 19:3:     'seedTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 42:46:    'deleteEduPartner' is defined but never used                                                                                                                                              no-unused-vars
+  Line 55:3:     'baseTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 2242:6:   React Hook useEffect has missing dependencies: 'buildTrainerSessionBooking', 'getTrainerSessionFromSelection', and 'selectedBooking'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 2365:42:  React Hook useMemo has a missing dependency: 'studentEnrollmentCourseOptions'. Either include it or remove the dependency array                                                           react-hooks/exhaustive-deps
+
+src\appData.js
+  Line 3:3:  'createEnrollmentRecord' is defined but never used  no-unused-vars
+
+src\utils.js
+  Line 74:43:  Function declared in a loop contains unsafe references to variable(s) 'weekOffset', 'weekOffset'  no-loop-func
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\App.js
+  Line 19:3:     'seedTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 42:46:    'deleteEduPartner' is defined but never used                                                                                                                                              no-unused-vars
+  Line 55:3:     'baseTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 2242:6:   React Hook useEffect has missing dependencies: 'buildTrainerSessionBooking', 'getTrainerSessionFromSelection', and 'selectedBooking'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 2365:42:  React Hook useMemo has a missing dependency: 'studentEnrollmentCourseOptions'. Either include it or remove the dependency array                                                           react-hooks/exhaustive-deps
+
+src\appData.js
+  Line 3:3:  'createEnrollmentRecord' is defined but never used  no-unused-vars
+
+src\utils.js
+  Line 74:43:  Function declared in a loop contains unsafe references to variable(s) 'weekOffset', 'weekOffset'  no-loop-func
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\App.js
+  Line 19:3:     'seedTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 42:46:    'deleteEduPartner' is defined but never used                                                                                                                                              no-unused-vars
+  Line 55:3:     'baseTrainers' is defined but never used                                                                                                                                                  no-unused-vars
+  Line 2242:6:   React Hook useEffect has missing dependencies: 'buildTrainerSessionBooking', 'getTrainerSessionFromSelection', and 'selectedBooking'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 2365:42:  React Hook useMemo has a missing dependency: 'studentEnrollmentCourseOptions'. Either include it or remove the dependency array                                                           react-hooks/exhaustive-deps
+
+src\appData.js
+  Line 3:3:  'createEnrollmentRecord' is defined but never used  no-unused-vars
+
+src\utils.js
+  Line 74:43:  Function declared in a loop contains unsafe references to variable(s) 'weekOffset', 'weekOffset'  no-loop-func
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m

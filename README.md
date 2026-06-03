@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# AkoCentric Classroom Booking
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Local MySQL setup
 
-## Available Scripts
+1. Install dependencies:
 
-In the project directory, you can run:
+```bash
+npm install
+```
 
-### `npm start`
+2. Copy `.env.example` to `.env` and set your local MySQL values:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```env
+PORT=3000
+API_PORT=4002
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your-local-mysql-password
+DB_NAME=ekocentric
+DB_CONNECTION_LIMIT=10
+SMTP_USER=your-gmail-address@gmail.com
+SMTP_PASS=your-gmail-app-password
+APPROVAL_EMAIL_TO=kumar.devadharshini@gmail.com
+REACT_APP_API_BASE_URL=https://classbook-api-926559568753.asia-southeast1.run.app
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The frontend now targets the deployed Google Cloud API by default. Only point `REACT_APP_API_BASE_URL` to `http://localhost:4002` if you intentionally want to run the API locally.
 
-### `npm test`
+3. Create the local MySQL database:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sql
+CREATE DATABASE classbook;
+```
 
-### `npm run build`
+4. Start the API server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm run api
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Check the DB connection:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+GET http://localhost:4002/api/db/health
+```
 
-### `npm run eject`
+6. Initialize the schema:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```text
+POST http://localhost:4000/api/db/init
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The schema file is in `server/schema.sql`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Running the app
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Use both frontend and backend together during local development:
 
-## Learn More
+```bash
+npm run dev
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Frontend: `http://localhost:3000`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+API: `http://localhost:4002`
 
-### Code Splitting
+## Current backend scope
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The MySQL layer is currently deployed behind Google Cloud and includes:
 
-### Analyzing the Bundle Size
+- shared DB connection pool in `server/db.js`
+- schema bootstrap in `server/schema.sql`
+- DB health endpoint at `/api/db/health`
+- schema init endpoint at `/api/db/init`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The React app is configured to call the deployed API by default. If you want to move the data layer fully onto Firebase services instead of the current Cloud Run + MySQL backend, that migration will require separate Firebase project credentials and service setup.
