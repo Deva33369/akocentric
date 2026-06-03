@@ -17,6 +17,7 @@ export default function LoginPage({
   openCreateAccount,
   closeCreateAccount,
   handleCreateAccount,
+  approvalEmail,
 }) {
   return (
     <main className="login-page">
@@ -51,7 +52,6 @@ export default function LoginPage({
                 type="radio"
                 name="login-role"
                 value="trainer"
-          approvalEmail
                 checked={loginRole === 'trainer'}
                 onChange={(e) => setLoginRole(e.target.value)}
               />
@@ -157,7 +157,7 @@ export default function LoginPage({
             </div>
             <form className="forgot-password-form" onSubmit={handleCreateAccount}>
               <p className="muted">
-                Request a new admin, trainer, or edu partners account. The request is sent to kumar.devadharshini@gmail.com for approval before login is allowed.
+                Request a new admin, trainer, or edu partners account. The request is sent to {approvalEmail} for approval before login is allowed.
               </p>
               <label>
                 Full name
@@ -191,7 +191,7 @@ export default function LoginPage({
                   />
                   <span>Admin</span>
                 </label>
-                        Request a new admin, trainer, or edu partners account. The request is sent to {approvalEmail} for approval before login is allowed.
+                <label className="role-option">
                   <input
                     type="radio"
                     name="create-account-role"
