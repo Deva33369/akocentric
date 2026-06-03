@@ -208,7 +208,7 @@ function formatAvailabilitySummary(availabilities) {
     .join(', ');
 }
 
-const approvalEmail = 'kumar.devadharshini@gmail.com';
+const approvalEmail = (process.env.REACT_APP_APPROVAL_EMAIL || '').trim() || 'akocentricsg@gmail.com';
 
 const testAccountsBypassApproval = {
   admin: ['justdeva2010@gmail.com'],
@@ -2632,6 +2632,7 @@ function App() {
           openCreateAccount={openCreateAccount}
           closeCreateAccount={closeCreateAccount}
           handleCreateAccount={handleCreateAccount}
+          approvalEmail={approvalEmail}
         />
       )}
 

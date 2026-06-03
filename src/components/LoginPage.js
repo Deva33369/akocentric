@@ -51,6 +51,7 @@ export default function LoginPage({
                 type="radio"
                 name="login-role"
                 value="trainer"
+          approvalEmail
                 checked={loginRole === 'trainer'}
                 onChange={(e) => setLoginRole(e.target.value)}
               />
@@ -190,7 +191,7 @@ export default function LoginPage({
                   />
                   <span>Admin</span>
                 </label>
-                <label className="role-option">
+                        Request a new admin, trainer, or edu partners account. The request is sent to {approvalEmail} for approval before login is allowed.
                   <input
                     type="radio"
                     name="create-account-role"
