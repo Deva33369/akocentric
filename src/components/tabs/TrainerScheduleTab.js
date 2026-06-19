@@ -16,6 +16,7 @@ export default function TrainerScheduleTab({
   courseOptions,
   bookingCourseOptions,
   trainerTimeSlots,
+  timeOptions,
   loginRole,
   trainerSearch,
   setTrainerSearch,
@@ -359,30 +360,38 @@ export default function TrainerScheduleTab({
                             </button>
                             <label>
                               <span className="sr-only">{day.label} from</span>
-                              <select
+                              <input
+                                type="text"
+                                list={`add-trainer-from-${day.label}`}
                                 aria-label={`${day.label} from time`}
-                                value={availability?.fromTime || trainerTimeSlots[0]}
+                                value={availability?.fromTime || ''}
                                 onChange={(e) => handleTrainerFormAvailabilityTimeChange(day.label, 'fromTime', e.target.value)}
                                 disabled={!availability}
-                              >
-                                {trainerTimeSlots.map((slot) => (
-                                  <option key={slot} value={slot}>{slot}</option>
+                                placeholder="08:00"
+                              />
+                              <datalist id={`add-trainer-from-${day.label}`}>
+                                {timeOptions.map((slot) => (
+                                  <option key={slot} value={slot} />
                                 ))}
-                              </select>
+                              </datalist>
                             </label>
                             <span style={{ fontSize: '0.75rem', color: 'var(--muted,#888)', alignSelf: 'center' }}>to</span>
                             <label>
                               <span className="sr-only">{day.label} to</span>
-                              <select
+                              <input
+                                type="text"
+                                list={`add-trainer-to-${day.label}`}
                                 aria-label={`${day.label} to time`}
-                                value={availability?.toTime || trainerTimeSlots[trainerTimeSlots.length - 1]}
+                                value={availability?.toTime || ''}
                                 onChange={(e) => handleTrainerFormAvailabilityTimeChange(day.label, 'toTime', e.target.value)}
                                 disabled={!availability}
-                              >
-                                {trainerTimeSlots.map((slot) => (
-                                  <option key={slot} value={slot}>{slot}</option>
+                                placeholder="21:30"
+                              />
+                              <datalist id={`add-trainer-to-${day.label}`}>
+                                {timeOptions.map((slot) => (
+                                  <option key={slot} value={slot} />
                                 ))}
-                              </select>
+                              </datalist>
                             </label>
                           </div>
                         );
@@ -561,30 +570,38 @@ export default function TrainerScheduleTab({
                                   </button>
                                   <label>
                                     <span className="sr-only">{day.label} from</span>
-                                    <select
+                                    <input
+                                      type="text"
+                                      list={`sel-trainer-from-${day.label}`}
                                       aria-label={`${day.label} from time`}
-                                      value={availability?.fromTime || trainerTimeSlots[0]}
+                                      value={availability?.fromTime || ''}
                                       onChange={(e) => handleSelectedTrainerAvailabilityTimeChange(day.label, 'fromTime', e.target.value)}
                                       disabled={!availability}
-                                    >
-                                      {trainerTimeSlots.map((slot) => (
-                                        <option key={slot} value={slot}>{slot}</option>
+                                      placeholder="08:00"
+                                    />
+                                    <datalist id={`sel-trainer-from-${day.label}`}>
+                                      {timeOptions.map((slot) => (
+                                        <option key={slot} value={slot} />
                                       ))}
-                                    </select>
+                                    </datalist>
                                   </label>
                                   <span style={{ fontSize: '0.75rem', color: 'var(--muted,#888)', alignSelf: 'center' }}>to</span>
                                   <label>
                                     <span className="sr-only">{day.label} to</span>
-                                    <select
+                                    <input
+                                      type="text"
+                                      list={`sel-trainer-to-${day.label}`}
                                       aria-label={`${day.label} to time`}
-                                      value={availability?.toTime || trainerTimeSlots[trainerTimeSlots.length - 1]}
+                                      value={availability?.toTime || ''}
                                       onChange={(e) => handleSelectedTrainerAvailabilityTimeChange(day.label, 'toTime', e.target.value)}
                                       disabled={!availability}
-                                    >
-                                      {trainerTimeSlots.map((slot) => (
-                                        <option key={slot} value={slot}>{slot}</option>
+                                      placeholder="21:30"
+                                    />
+                                    <datalist id={`sel-trainer-to-${day.label}`}>
+                                      {timeOptions.map((slot) => (
+                                        <option key={slot} value={slot} />
                                       ))}
-                                    </select>
+                                    </datalist>
                                   </label>
                                 </div>
                               );

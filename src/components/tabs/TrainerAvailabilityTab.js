@@ -1,6 +1,7 @@
 export default function TrainerAvailabilityTab({
   trainer,
   trainerTimeSlots,
+  timeOptions,
   weekdayOptions,
   handleSelectedTrainerFieldChange,
   handleSelectedTrainerDayToggle,
@@ -57,30 +58,38 @@ export default function TrainerAvailabilityTab({
                         </button>
                         <label>
                           <span className="sr-only">{day.label} from</span>
-                          <select
+                          <input
+                            type="text"
+                            list={`avail-from-${day.label}`}
                             aria-label={`${day.label} from time`}
-                            value={availability?.fromTime || trainerTimeSlots[0]}
+                            value={availability?.fromTime || ''}
                             onChange={(e) => handleSelectedTrainerAvailabilityTimeChange(day.label, 'fromTime', e.target.value)}
                             disabled={!availability}
-                          >
-                            {trainerTimeSlots.map((slot) => (
-                              <option key={slot} value={slot}>{slot}</option>
+                            placeholder="08:00"
+                          />
+                          <datalist id={`avail-from-${day.label}`}>
+                            {timeOptions.map((slot) => (
+                              <option key={slot} value={slot} />
                             ))}
-                          </select>
+                          </datalist>
                         </label>
                         <span style={{ fontSize: '0.75rem', color: 'var(--muted,#888)', alignSelf: 'center' }}>to</span>
                         <label>
                           <span className="sr-only">{day.label} to</span>
-                          <select
+                          <input
+                            type="text"
+                            list={`avail-to-${day.label}`}
                             aria-label={`${day.label} to time`}
-                            value={availability?.toTime || trainerTimeSlots[trainerTimeSlots.length - 1]}
+                            value={availability?.toTime || ''}
                             onChange={(e) => handleSelectedTrainerAvailabilityTimeChange(day.label, 'toTime', e.target.value)}
                             disabled={!availability}
-                          >
-                            {trainerTimeSlots.map((slot) => (
-                              <option key={slot} value={slot}>{slot}</option>
+                            placeholder="21:30"
+                          />
+                          <datalist id={`avail-to-${day.label}`}>
+                            {timeOptions.map((slot) => (
+                              <option key={slot} value={slot} />
                             ))}
-                          </select>
+                          </datalist>
                         </label>
                       </div>
                     );

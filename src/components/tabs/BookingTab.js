@@ -134,14 +134,18 @@ export default function BookingTab({
               </label>
               <label>
                 Start time
-                <select
+                <input
+                  type="text"
+                  list="booking-start-time-options"
                   value={bookingForm.start}
                   onChange={(e) => setBookingForm({ ...bookingForm, start: e.target.value })}
-                >
+                  placeholder="09:00"
+                />
+                <datalist id="booking-start-time-options">
                   {timeOptions.map((time) => (
-                    <option key={time} value={time}>{time}</option>
+                    <option key={time} value={time} />
                   ))}
-                </select>
+                </datalist>
               </label>
               <label>
                 Duration

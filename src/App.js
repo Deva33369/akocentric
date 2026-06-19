@@ -2486,6 +2486,7 @@ function App() {
             courseOptions={courseOptions}
             bookingCourseOptions={bookingCourseOptions}
             trainerTimeSlots={trainerTimeSlots}
+            timeOptions={timeOptions}
             loginRole={loginRole}
             trainerSearch={trainerSearch}
             setTrainerSearch={setTrainerSearch}
@@ -2530,6 +2531,7 @@ function App() {
           <TrainerAvailabilityTab
             trainer={selectedTrainer}
             trainerTimeSlots={trainerTimeSlots}
+            timeOptions={timeOptions}
             weekdayOptions={weekdayOptions}
             handleSelectedTrainerFieldChange={handleSelectedTrainerFieldChange}
             handleSelectedTrainerDayToggle={handleSelectedTrainerDayToggle}

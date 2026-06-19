@@ -230,25 +230,33 @@ export default function BookingModal({
                 <div className="form__row">
                   <label>
                     Start time
-                    <select
+                    <input
+                      type="text"
+                      list="modal-trainer-start-time-options"
                       value={editForm.start}
                       onChange={(e) => setEditForm((prev) => ({ ...prev, start: e.target.value }))}
-                    >
+                      placeholder="09:00 AM"
+                    />
+                    <datalist id="modal-trainer-start-time-options">
                       {trainerEditTimeOptions.map((t) => (
-                        <option key={t} value={t}>{t}</option>
+                        <option key={t} value={t} />
                       ))}
-                    </select>
+                    </datalist>
                   </label>
                   <label>
                     End time
-                    <select
+                    <input
+                      type="text"
+                      list="modal-trainer-end-time-options"
                       value={editForm.end}
                       onChange={(e) => setEditForm((prev) => ({ ...prev, end: e.target.value }))}
-                    >
+                      placeholder="10:00 AM"
+                    />
+                    <datalist id="modal-trainer-end-time-options">
                       {trainerEditTimeOptions.map((t) => (
-                        <option key={t} value={t}>{t}</option>
+                        <option key={t} value={t} />
                       ))}
-                    </select>
+                    </datalist>
                   </label>
                 </div>
               ) : null}
@@ -279,25 +287,33 @@ export default function BookingModal({
                   <div className="form__row">
                     <label>
                       Start time
-                      <select
+                      <input
+                        type="text"
+                        list="modal-classroom-start-time-options"
                         value={editForm.start}
                         onChange={(e) => setEditForm((prev) => ({ ...prev, start: e.target.value }))}
-                      >
+                        placeholder="09:00"
+                      />
+                      <datalist id="modal-classroom-start-time-options">
                         {(timeOptions || []).map((t) => (
-                          <option key={t} value={t}>{t}</option>
+                          <option key={t} value={t} />
                         ))}
-                      </select>
+                      </datalist>
                     </label>
                     <label>
                       End time
-                      <select
+                      <input
+                        type="text"
+                        list="modal-classroom-end-time-options"
                         value={editForm.end}
                         onChange={(e) => setEditForm((prev) => ({ ...prev, end: e.target.value }))}
-                      >
+                        placeholder="10:00"
+                      />
+                      <datalist id="modal-classroom-end-time-options">
                         {(timeOptions || []).map((t) => (
-                          <option key={t} value={t}>{t}</option>
+                          <option key={t} value={t} />
                         ))}
-                      </select>
+                      </datalist>
                     </label>
                   </div>
                   <div className="form__row">

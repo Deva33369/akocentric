@@ -119,14 +119,18 @@ export default function CampsTab({
             <div className="form__row">
               <label>
                 Start time
-                <select
+                <input
+                  type="text"
+                  list="camp-start-time-options"
                   value={campForm.start}
                   onChange={(e) => setCampForm({ ...campForm, start: e.target.value })}
-                >
+                  placeholder="09:00"
+                />
+                <datalist id="camp-start-time-options">
                   {timeOptions.map((time) => (
-                    <option key={time} value={time}>{time}</option>
+                    <option key={time} value={time} />
                   ))}
-                </select>
+                </datalist>
               </label>
               <label>
                 Duration
